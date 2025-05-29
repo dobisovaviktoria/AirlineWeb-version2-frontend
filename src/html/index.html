@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Airplane Management Client</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg lilac-navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Airplane Management Client</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" id="nav-search" href="#">Search</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="nav-add" href="#">Add</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="container my-5" id="section-search">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card lilac-card">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4">Search Passengers</h2>
+                    <form id="search-form">
+                        <div class="input-group">
+                            <label for="search"></label>
+                            <input type="text" class="form-control" id="search" placeholder="Type first or last name..." required />
+                            <button class="btn btn-primary" type="submit">Search</button>
+                        </div>
+                    </form>
+                    <div id="search-results" class="mt-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5" id="section-add" style="display: none;">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card lilac-card">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4">Add Booking</h2>
+                    <form id="add-booking-form">
+                        <div class="mb-3">
+                            <label for="passenger-select" class="form-label">Select a Passenger</label>
+                            <select id="passenger-select" name="passenger-select" class="form-select"></select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="flight-select" class="form-label">Select a Flight</label>
+                            <select id="flight-select" name="flight-select" class="form-select"></select>
+                        </div>
+
+                        <button class="btn btn-primary w-100" type="submit">Add Booking</button>
+                        <p id="booking-message" class="mt-3 text-center text-muted"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
